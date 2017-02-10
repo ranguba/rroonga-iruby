@@ -1,4 +1,4 @@
-# Copyright (C) 2016  Kouhei Sutou <kou@clear-code.com>
+# Copyright (C) 2016-2017  Kouhei Sutou <kou@clear-code.com>
 #
 # This library is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
@@ -18,9 +18,14 @@ require "groonga"
 
 require "rroonga-iruby/version"
 
+require "rroonga-iruby/record"
 require "rroonga-iruby/table"
 
 module Groonga
+  class Record
+    include RroongaIRuby::Record
+  end
+
   class Table
     include RroongaIRuby::Table
   end
